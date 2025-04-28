@@ -417,4 +417,60 @@ using namespace std;
 
 //DYNAMIC POLYMORPHISM CAN'T DO FUNCTION OVERLOADING RATHER THE FUNCTION OVERRIDING
 //ON THE CONTRARY, STATIC POLYMORPHISM CAN DO FUNCTION OVERLOADING AND OVERRIDING ASW
+#include <iostream>
+using namespace std;
 
+//28/04/2025
+class A {
+public:
+	A() {
+		cout << "A\n";
+	}
+	void print() {
+		cout << "A print\n";
+	}
+};
+
+class B: public A {
+public:
+	B() {
+		cout << "B\n";
+	}
+	void print() {
+		cout << "B print\n";
+	}
+};
+
+class C: public B {
+public:
+	C() {
+		cout << "C\n";
+	}
+	void print(const C& obj) {
+		cout << "C print\n";
+	}
+};
+
+void print(C &obj) {
+	cout << "Function out of line is called!!!\n";
+}
+
+
+int main() {
+	A* p;
+	p = new A;
+	p->print();
+	delete p;
+
+	p = new B;
+	p->print();
+
+	delete p;
+	p = new C;
+	p->print();
+	delete p;
+	
+
+
+	return 0;
+}
