@@ -475,3 +475,48 @@ int main() {
 
 	return 0;
 }*/
+
+
+
+
+//05/03/2025
+//------------------------------Understanding of LinkedList----------------------------------------------------
+
+struct Node {
+	int data;
+	Node* link;
+};
+
+class List {
+public:
+	Node* head;
+	List() {
+		head = NULL;
+	}
+	void insert(int v) {
+		Node* temp = new Node;
+		temp->data = v;
+		temp->link = NULL;
+
+		if (head == NULL) {
+			head = temp;
+		}
+		else {
+			temp->link = head;
+			head = temp;
+		}
+	}
+	void show() {
+		while (head->link != NULL) {
+			cout << head->data << endl;
+		}
+	}
+};
+
+int main() {
+	List obj;
+	obj.insert(5);
+	obj.insert(10);
+	obj.insert(15);
+
+}
