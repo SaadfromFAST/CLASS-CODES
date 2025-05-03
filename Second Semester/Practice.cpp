@@ -417,9 +417,10 @@ using namespace std;
 
 //DYNAMIC POLYMORPHISM CAN'T DO FUNCTION OVERLOADING RATHER THE FUNCTION OVERRIDING
 //ON THE CONTRARY, STATIC POLYMORPHISM CAN DO FUNCTION OVERLOADING AND OVERRIDING ASW
-#include <iostream>
-using namespace std;
 
+
+
+/*
 //28/04/2025
 class A {
 public:
@@ -473,4 +474,4 @@ int main() {
 
 
 	return 0;
-}
+}*/
